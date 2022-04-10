@@ -52,7 +52,8 @@ class RemoteFeedLoaderTests: XCTestCase {
         samples.enumerated().forEach { index, code in
             
             expect(sut, toCompleteWithResult: .failure(.invalidData)) {
-                client.complete(withStatusCode: code, at: index)
+                let json = makeItemsJSON([])
+                client.complete(withStatusCode: code, data: json, at: index)
             }
         }
     }
@@ -86,10 +87,6 @@ class RemoteFeedLoaderTests: XCTestCase {
                              description: "a description",
                              location: "a location",
                              imageURL: URL(string: "http://another-url.com")!)
-        
-        let itemsJSON = [
-            "items": [item1.json, item2.json]
-        ]
         
         let items = [item1.model, item2.model]
         
@@ -129,13 +126,13 @@ class RemoteFeedLoaderTests: XCTestCase {
     }
     
     private func expect(_ sut: RemoteFeedLoader, toCompleteWithResult result: RemoteFeedLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
-        var capturedErrors = [RemoteFeedLoader.Result]()
+        var capturedResults = [RemoteFeedLoader.Result]()
         
-        sut.load { capturedErrors.append($0) }
+        sut.load { capturedResults.append($0) }
         
         action()
         
-        XCTAssertEqual(capturedErrors, [result], file: file, line: line)
+        XCTAssertEqual(capturedResults, [result], file: file, line: line)
     }
     
     private class HTTPClientSpy: HTTPClient {
@@ -153,7 +150,7 @@ class RemoteFeedLoaderTests: XCTestCase {
             messages[index].completion(.failure(error))
         }
         
-        func complete(withStatusCode code: Int, data: Data = Data(), at index: Int = 0) {
+        func complete(withStatusCode code: Int, data: Data, at index: Int = 0) {
             let response = HTTPURLResponse(url: requestedURLs[index],
                                            statusCode: code,
                                            httpVersion: nil,
