@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB603BC1280B135900B20DBE /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB603BC0280B135900B20DBE /* EssentialFeedAPIEndToEndTests.swift */; };
 		AB603BC2280B135900B20DBE /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE896FB27FEA628009ABE87 /* EssentialFeed.framework */; };
+		AB603BC8280B1B1F00B20DBE /* XCTTestCase+MemortLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB770B0228088873006E3182 /* XCTTestCase+MemortLeakTracking.swift */; };
 		AB770B0328088873006E3182 /* XCTTestCase+MemortLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB770B0228088873006E3182 /* XCTTestCase+MemortLeakTracking.swift */; };
 		AB770B052808A07F006E3182 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB770B042808A07F006E3182 /* URLSessionHTTPClient.swift */; };
 		ABE8970027FEA628009ABE87 /* EssentialFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABE896FF27FEA628009ABE87 /* EssentialFeed.docc */; };
@@ -93,6 +94,14 @@
 			path = EssentialFeedAPIEndToEndTests;
 			sourceTree = "<group>";
 		};
+		AB603BC9280B1B2800B20DBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB770B0228088873006E3182 /* XCTTestCase+MemortLeakTracking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		ABE896F127FEA628009ABE87 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +136,7 @@
 		ABE8970927FEA628009ABE87 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB603BC9280B1B2800B20DBE /* Helpers */,
 				ABE8972628052A98009ABE87 /* Feed API Tests */,
 			);
 			path = EssentialFeedTests;
@@ -157,7 +167,6 @@
 			children = (
 				ABE8971D27FFBEC5009ABE87 /* RemoteFeedLoaderTests.swift */,
 				ABF5ED8F28067273009F2D19 /* URLSessionHTTPClientTests.swift */,
-				AB770B0228088873006E3182 /* XCTTestCase+MemortLeakTracking.swift */,
 			);
 			path = "Feed API Tests";
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB603BC1280B135900B20DBE /* EssentialFeedAPIEndToEndTests.swift in Sources */,
+				AB603BC8280B1B1F00B20DBE /* XCTTestCase+MemortLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
