@@ -7,12 +7,12 @@
 
 import Foundation
 
-class FeedItemsMapper {
+enum FeedItemsMapper {
     private struct Root: Decodable {
         let items: [Item]
         
         var feedItems: [FeedItem] {
-            return items.map{ $0.item }
+            return items.map(\.item)
         }
     }
     
