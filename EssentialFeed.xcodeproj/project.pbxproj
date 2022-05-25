@@ -31,6 +31,7 @@
 		ABF5ED9028067273009F2D19 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5ED8F28067273009F2D19 /* URLSessionHTTPClientTests.swift */; };
 		ABFB7B59283EF250009BB2FA /* ValidateFeedcacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB7B58283EF250009BB2FA /* ValidateFeedcacheUseCaseTests.swift */; };
 		ABFB7B5B283EF625009BB2FA /* FeedCacheHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB7B5A283EF625009BB2FA /* FeedCacheHelpers.swift */; };
+		ABFB7B5E283EF751009BB2FA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB7B5D283EF751009BB2FA /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		ABF5ED8F28067273009F2D19 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		ABFB7B58283EF250009BB2FA /* ValidateFeedcacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedcacheUseCaseTests.swift; sourceTree = "<group>"; };
 		ABFB7B5A283EF625009BB2FA /* FeedCacheHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheHelpers.swift; sourceTree = "<group>"; };
+		ABFB7B5D283EF751009BB2FA /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AB770B0228088873006E3182 /* XCTTestCase+MemortLeakTracking.swift */,
+				ABFB7B5D283EF751009BB2FA /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				ABFB7B59283EF250009BB2FA /* ValidateFeedcacheUseCaseTests.swift in Sources */,
 				ABC7D857282C763800AAAF14 /* FeedStoreSpy.swift in Sources */,
 				ABFB7B5B283EF625009BB2FA /* FeedCacheHelpers.swift in Sources */,
+				ABFB7B5E283EF751009BB2FA /* SharedTestHelpers.swift in Sources */,
 				ABE8971E27FFBEC6009ABE87 /* RemoteFeedLoaderTests.swift in Sources */,
 				ABB7CDED281CE8F30007D032 /* CacheFeedUseCase.swift in Sources */,
 				ABF5ED9028067273009F2D19 /* URLSessionHTTPClientTests.swift in Sources */,
